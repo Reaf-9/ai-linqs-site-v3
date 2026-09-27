@@ -1,0 +1,1463 @@
+{
+  "type": "static only — no browser rendering",
+  "checks": [
+    {
+      "check": "index.html: unique IDs",
+      "passed": true
+    },
+    {
+      "check": "index.html: one h1",
+      "passed": true
+    },
+    {
+      "check": "index.html: noindex,nofollow",
+      "passed": true
+    },
+    {
+      "check": "index.html: no dialogs",
+      "passed": true
+    },
+    {
+      "check": "index.html: shared CSS/JS",
+      "passed": true
+    },
+    {
+      "check": "index.html: favicons",
+      "passed": true
+    },
+    {
+      "check": "index.html: local assets/favicon-32.png",
+      "passed": true
+    },
+    {
+      "check": "index.html: local assets/favicon-192.png",
+      "passed": true
+    },
+    {
+      "check": "index.html: local assets/favicon-180.png",
+      "passed": true
+    },
+    {
+      "check": "index.html: local css/style.css",
+      "passed": true
+    },
+    {
+      "check": "index.html: local js/main.js",
+      "passed": true
+    },
+    {
+      "check": "index.html: local #main",
+      "passed": true
+    },
+    {
+      "check": "index.html: anchor #main",
+      "passed": true
+    },
+    {
+      "check": "index.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "index.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "index.html: local about.html",
+      "passed": true
+    },
+    {
+      "check": "index.html: local service.html",
+      "passed": true
+    },
+    {
+      "check": "index.html: local works.html",
+      "passed": true
+    },
+    {
+      "check": "index.html: local contact.html",
+      "passed": true
+    },
+    {
+      "check": "index.html: local contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "index.html: anchor contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "index.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "index.html: local about.html",
+      "passed": true
+    },
+    {
+      "check": "index.html: local service.html",
+      "passed": true
+    },
+    {
+      "check": "index.html: local works.html",
+      "passed": true
+    },
+    {
+      "check": "index.html: local contact.html",
+      "passed": true
+    },
+    {
+      "check": "index.html: local contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "index.html: anchor contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "index.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "index.html: local about.html",
+      "passed": true
+    },
+    {
+      "check": "index.html: local service.html",
+      "passed": true
+    },
+    {
+      "check": "index.html: local works.html",
+      "passed": true
+    },
+    {
+      "check": "index.html: local contact.html",
+      "passed": true
+    },
+    {
+      "check": "index.html: local assets/key-visual.jpg",
+      "passed": true
+    },
+    {
+      "check": "index.html: local contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "index.html: anchor contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "index.html: local assets/philosophy.jpg",
+      "passed": true
+    },
+    {
+      "check": "index.html: local about.html",
+      "passed": true
+    },
+    {
+      "check": "index.html: local assets/issue-01.jpg",
+      "passed": true
+    },
+    {
+      "check": "index.html: local assets/issue-02.jpg",
+      "passed": true
+    },
+    {
+      "check": "index.html: local assets/issue-03.jpg",
+      "passed": true
+    },
+    {
+      "check": "index.html: local assets/service-training.jpg",
+      "passed": true
+    },
+    {
+      "check": "index.html: local assets/service-aistaff.jpg",
+      "passed": true
+    },
+    {
+      "check": "index.html: local assets/service-app.jpg",
+      "passed": true
+    },
+    {
+      "check": "index.html: local service.html",
+      "passed": true
+    },
+    {
+      "check": "index.html: local assets/case-01.jpg",
+      "passed": true
+    },
+    {
+      "check": "index.html: local assets/case-02.jpg",
+      "passed": true
+    },
+    {
+      "check": "index.html: local assets/case-03.jpg",
+      "passed": true
+    },
+    {
+      "check": "index.html: local works.html",
+      "passed": true
+    },
+    {
+      "check": "index.html: local contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "index.html: anchor contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "index.html: local assets/line-qr.png",
+      "passed": true
+    },
+    {
+      "check": "index.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "index.html: local service.html",
+      "passed": true
+    },
+    {
+      "check": "index.html: local works.html",
+      "passed": true
+    },
+    {
+      "check": "index.html: local about.html",
+      "passed": true
+    },
+    {
+      "check": "index.html: local contact.html",
+      "passed": true
+    },
+    {
+      "check": "index.html: local privacy.html",
+      "passed": true
+    },
+    {
+      "check": "index.html: local contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "index.html: anchor contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "index.html: reference is not linked",
+      "passed": true
+    },
+    {
+      "check": "index.html: active navigation",
+      "passed": true
+    },
+    {
+      "check": "about.html: unique IDs",
+      "passed": true
+    },
+    {
+      "check": "about.html: one h1",
+      "passed": true
+    },
+    {
+      "check": "about.html: noindex,nofollow",
+      "passed": true
+    },
+    {
+      "check": "about.html: no dialogs",
+      "passed": true
+    },
+    {
+      "check": "about.html: shared CSS/JS",
+      "passed": true
+    },
+    {
+      "check": "about.html: favicons",
+      "passed": true
+    },
+    {
+      "check": "about.html: local assets/favicon-32.png",
+      "passed": true
+    },
+    {
+      "check": "about.html: local assets/favicon-192.png",
+      "passed": true
+    },
+    {
+      "check": "about.html: local assets/favicon-180.png",
+      "passed": true
+    },
+    {
+      "check": "about.html: local css/style.css",
+      "passed": true
+    },
+    {
+      "check": "about.html: local js/main.js",
+      "passed": true
+    },
+    {
+      "check": "about.html: local #main",
+      "passed": true
+    },
+    {
+      "check": "about.html: anchor #main",
+      "passed": true
+    },
+    {
+      "check": "about.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "about.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "about.html: local about.html",
+      "passed": true
+    },
+    {
+      "check": "about.html: local service.html",
+      "passed": true
+    },
+    {
+      "check": "about.html: local works.html",
+      "passed": true
+    },
+    {
+      "check": "about.html: local contact.html",
+      "passed": true
+    },
+    {
+      "check": "about.html: local contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "about.html: anchor contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "about.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "about.html: local about.html",
+      "passed": true
+    },
+    {
+      "check": "about.html: local service.html",
+      "passed": true
+    },
+    {
+      "check": "about.html: local works.html",
+      "passed": true
+    },
+    {
+      "check": "about.html: local contact.html",
+      "passed": true
+    },
+    {
+      "check": "about.html: local contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "about.html: anchor contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "about.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "about.html: local about.html",
+      "passed": true
+    },
+    {
+      "check": "about.html: local service.html",
+      "passed": true
+    },
+    {
+      "check": "about.html: local works.html",
+      "passed": true
+    },
+    {
+      "check": "about.html: local contact.html",
+      "passed": true
+    },
+    {
+      "check": "about.html: local assets/signature-dark.png",
+      "passed": true
+    },
+    {
+      "check": "about.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "about.html: local service.html",
+      "passed": true
+    },
+    {
+      "check": "about.html: local works.html",
+      "passed": true
+    },
+    {
+      "check": "about.html: local about.html",
+      "passed": true
+    },
+    {
+      "check": "about.html: local contact.html",
+      "passed": true
+    },
+    {
+      "check": "about.html: local privacy.html",
+      "passed": true
+    },
+    {
+      "check": "about.html: local contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "about.html: anchor contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "about.html: reference is not linked",
+      "passed": true
+    },
+    {
+      "check": "about.html: active navigation",
+      "passed": true
+    },
+    {
+      "check": "service.html: unique IDs",
+      "passed": true
+    },
+    {
+      "check": "service.html: one h1",
+      "passed": true
+    },
+    {
+      "check": "service.html: noindex,nofollow",
+      "passed": true
+    },
+    {
+      "check": "service.html: no dialogs",
+      "passed": true
+    },
+    {
+      "check": "service.html: shared CSS/JS",
+      "passed": true
+    },
+    {
+      "check": "service.html: favicons",
+      "passed": true
+    },
+    {
+      "check": "service.html: local assets/favicon-32.png",
+      "passed": true
+    },
+    {
+      "check": "service.html: local assets/favicon-192.png",
+      "passed": true
+    },
+    {
+      "check": "service.html: local assets/favicon-180.png",
+      "passed": true
+    },
+    {
+      "check": "service.html: local css/style.css",
+      "passed": true
+    },
+    {
+      "check": "service.html: local js/main.js",
+      "passed": true
+    },
+    {
+      "check": "service.html: local #main",
+      "passed": true
+    },
+    {
+      "check": "service.html: anchor #main",
+      "passed": true
+    },
+    {
+      "check": "service.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "service.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "service.html: local about.html",
+      "passed": true
+    },
+    {
+      "check": "service.html: local service.html",
+      "passed": true
+    },
+    {
+      "check": "service.html: local works.html",
+      "passed": true
+    },
+    {
+      "check": "service.html: local contact.html",
+      "passed": true
+    },
+    {
+      "check": "service.html: local contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "service.html: anchor contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "service.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "service.html: local about.html",
+      "passed": true
+    },
+    {
+      "check": "service.html: local service.html",
+      "passed": true
+    },
+    {
+      "check": "service.html: local works.html",
+      "passed": true
+    },
+    {
+      "check": "service.html: local contact.html",
+      "passed": true
+    },
+    {
+      "check": "service.html: local contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "service.html: anchor contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "service.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "service.html: local about.html",
+      "passed": true
+    },
+    {
+      "check": "service.html: local service.html",
+      "passed": true
+    },
+    {
+      "check": "service.html: local works.html",
+      "passed": true
+    },
+    {
+      "check": "service.html: local contact.html",
+      "passed": true
+    },
+    {
+      "check": "service.html: local assets/service-training.jpg",
+      "passed": true
+    },
+    {
+      "check": "service.html: local assets/service-aistaff.jpg",
+      "passed": true
+    },
+    {
+      "check": "service.html: local assets/service-app.jpg",
+      "passed": true
+    },
+    {
+      "check": "service.html: local #detail-training",
+      "passed": true
+    },
+    {
+      "check": "service.html: anchor #detail-training",
+      "passed": true
+    },
+    {
+      "check": "service.html: local #detail-aistaff",
+      "passed": true
+    },
+    {
+      "check": "service.html: anchor #detail-aistaff",
+      "passed": true
+    },
+    {
+      "check": "service.html: local #compare",
+      "passed": true
+    },
+    {
+      "check": "service.html: anchor #compare",
+      "passed": true
+    },
+    {
+      "check": "service.html: local contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "service.html: anchor contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "service.html: local contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "service.html: anchor contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "service.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "service.html: local service.html",
+      "passed": true
+    },
+    {
+      "check": "service.html: local works.html",
+      "passed": true
+    },
+    {
+      "check": "service.html: local about.html",
+      "passed": true
+    },
+    {
+      "check": "service.html: local contact.html",
+      "passed": true
+    },
+    {
+      "check": "service.html: local privacy.html",
+      "passed": true
+    },
+    {
+      "check": "service.html: local contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "service.html: anchor contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "service.html: reference is not linked",
+      "passed": true
+    },
+    {
+      "check": "service.html: active navigation",
+      "passed": true
+    },
+    {
+      "check": "works.html: unique IDs",
+      "passed": true
+    },
+    {
+      "check": "works.html: one h1",
+      "passed": true
+    },
+    {
+      "check": "works.html: noindex,nofollow",
+      "passed": true
+    },
+    {
+      "check": "works.html: no dialogs",
+      "passed": true
+    },
+    {
+      "check": "works.html: shared CSS/JS",
+      "passed": true
+    },
+    {
+      "check": "works.html: favicons",
+      "passed": true
+    },
+    {
+      "check": "works.html: local assets/favicon-32.png",
+      "passed": true
+    },
+    {
+      "check": "works.html: local assets/favicon-192.png",
+      "passed": true
+    },
+    {
+      "check": "works.html: local assets/favicon-180.png",
+      "passed": true
+    },
+    {
+      "check": "works.html: local css/style.css",
+      "passed": true
+    },
+    {
+      "check": "works.html: local js/main.js",
+      "passed": true
+    },
+    {
+      "check": "works.html: local #main",
+      "passed": true
+    },
+    {
+      "check": "works.html: anchor #main",
+      "passed": true
+    },
+    {
+      "check": "works.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "works.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "works.html: local about.html",
+      "passed": true
+    },
+    {
+      "check": "works.html: local service.html",
+      "passed": true
+    },
+    {
+      "check": "works.html: local works.html",
+      "passed": true
+    },
+    {
+      "check": "works.html: local contact.html",
+      "passed": true
+    },
+    {
+      "check": "works.html: local contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "works.html: anchor contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "works.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "works.html: local about.html",
+      "passed": true
+    },
+    {
+      "check": "works.html: local service.html",
+      "passed": true
+    },
+    {
+      "check": "works.html: local works.html",
+      "passed": true
+    },
+    {
+      "check": "works.html: local contact.html",
+      "passed": true
+    },
+    {
+      "check": "works.html: local contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "works.html: anchor contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "works.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "works.html: local about.html",
+      "passed": true
+    },
+    {
+      "check": "works.html: local service.html",
+      "passed": true
+    },
+    {
+      "check": "works.html: local works.html",
+      "passed": true
+    },
+    {
+      "check": "works.html: local contact.html",
+      "passed": true
+    },
+    {
+      "check": "works.html: local assets/case-01.jpg",
+      "passed": true
+    },
+    {
+      "check": "works.html: local assets/case-02.jpg",
+      "passed": true
+    },
+    {
+      "check": "works.html: local assets/case-03.jpg",
+      "passed": true
+    },
+    {
+      "check": "works.html: local contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "works.html: anchor contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "works.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "works.html: local service.html",
+      "passed": true
+    },
+    {
+      "check": "works.html: local works.html",
+      "passed": true
+    },
+    {
+      "check": "works.html: local about.html",
+      "passed": true
+    },
+    {
+      "check": "works.html: local contact.html",
+      "passed": true
+    },
+    {
+      "check": "works.html: local privacy.html",
+      "passed": true
+    },
+    {
+      "check": "works.html: local contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "works.html: anchor contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "works.html: reference is not linked",
+      "passed": true
+    },
+    {
+      "check": "works.html: active navigation",
+      "passed": true
+    },
+    {
+      "check": "contact.html: unique IDs",
+      "passed": true
+    },
+    {
+      "check": "contact.html: one h1",
+      "passed": true
+    },
+    {
+      "check": "contact.html: noindex,nofollow",
+      "passed": true
+    },
+    {
+      "check": "contact.html: no dialogs",
+      "passed": true
+    },
+    {
+      "check": "contact.html: shared CSS/JS",
+      "passed": true
+    },
+    {
+      "check": "contact.html: favicons",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local assets/favicon-32.png",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local assets/favicon-192.png",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local assets/favicon-180.png",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local css/style.css",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local js/main.js",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local #main",
+      "passed": true
+    },
+    {
+      "check": "contact.html: anchor #main",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local about.html",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local service.html",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local works.html",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local contact.html",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local #contact",
+      "passed": true
+    },
+    {
+      "check": "contact.html: anchor #contact",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local about.html",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local service.html",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local works.html",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local contact.html",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local #contact",
+      "passed": true
+    },
+    {
+      "check": "contact.html: anchor #contact",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local about.html",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local service.html",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local works.html",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local contact.html",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local assets/line-qr.png",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local #contact",
+      "passed": true
+    },
+    {
+      "check": "contact.html: anchor #contact",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local privacy.html",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local service.html",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local works.html",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local about.html",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local contact.html",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local privacy.html",
+      "passed": true
+    },
+    {
+      "check": "contact.html: local #contact",
+      "passed": true
+    },
+    {
+      "check": "contact.html: anchor #contact",
+      "passed": true
+    },
+    {
+      "check": "contact.html: reference is not linked",
+      "passed": true
+    },
+    {
+      "check": "contact.html: active navigation",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: unique IDs",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: one h1",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: noindex,nofollow",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: no dialogs",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: shared CSS/JS",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: favicons",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local assets/favicon-32.png",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local assets/favicon-192.png",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local assets/favicon-180.png",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local css/style.css",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local js/main.js",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local #main",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: anchor #main",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local about.html",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local service.html",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local works.html",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local contact.html",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: anchor contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local about.html",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local service.html",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local works.html",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local contact.html",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: anchor contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local about.html",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local service.html",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local works.html",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local contact.html",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local index.html",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local service.html",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local works.html",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local about.html",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local contact.html",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local privacy.html",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: local contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: anchor contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "privacy.html: reference is not linked",
+      "passed": true
+    },
+    {
+      "check": "detail-training: full original copy",
+      "passed": true
+    },
+    {
+      "check": "detail-aistaff: full original copy",
+      "passed": true
+    },
+    {
+      "check": "privacy: full original copy",
+      "passed": true
+    },
+    {
+      "check": "FAQ: all eight original questions and answers",
+      "passed": true
+    },
+    {
+      "check": "case-1: original company and outcomes",
+      "passed": true
+    },
+    {
+      "check": "case-1: no old diagram",
+      "passed": true
+    },
+    {
+      "check": "case-1: pending consent copy",
+      "passed": true
+    },
+    {
+      "check": "case-2: original company and outcomes",
+      "passed": true
+    },
+    {
+      "check": "case-2: no old diagram",
+      "passed": true
+    },
+    {
+      "check": "case-2: pending consent copy",
+      "passed": true
+    },
+    {
+      "check": "case-3: original company and outcomes",
+      "passed": true
+    },
+    {
+      "check": "case-3: no old diagram",
+      "passed": true
+    },
+    {
+      "check": "case-3: pending consent copy",
+      "passed": true
+    },
+    {
+      "check": "issue-1: original body",
+      "passed": true
+    },
+    {
+      "check": "issue-2: original body",
+      "passed": true
+    },
+    {
+      "check": "issue-3: original body",
+      "passed": true
+    },
+    {
+      "check": "index.html: svc-training original body",
+      "passed": true
+    },
+    {
+      "check": "service.html: svc-training original body",
+      "passed": true
+    },
+    {
+      "check": "index.html: svc-aistaff original body",
+      "passed": true
+    },
+    {
+      "check": "service.html: svc-aistaff original body",
+      "passed": true
+    },
+    {
+      "check": "index.html: svc-app original body",
+      "passed": true
+    },
+    {
+      "check": "service.html: svc-app original body",
+      "passed": true
+    },
+    {
+      "check": "hero: explicit three lines",
+      "passed": true
+    },
+    {
+      "check": "philosophy: explicit two lines",
+      "passed": true
+    },
+    {
+      "check": "pillar: two heading / three body lines",
+      "passed": true
+    },
+    {
+      "check": "pillar: two heading / three body lines",
+      "passed": true
+    },
+    {
+      "check": "pillar: two heading / three body lines",
+      "passed": true
+    },
+    {
+      "check": "removed top sections and copy",
+      "passed": true
+    },
+    {
+      "check": "hero: no chips",
+      "passed": true
+    },
+    {
+      "check": "CSS: only six approved colors",
+      "passed": true
+    },
+    {
+      "check": "CSS: only approved radii",
+      "passed": true
+    },
+    {
+      "check": "CSS: no gradients/shadows/extra color functions",
+      "passed": true
+    },
+    {
+      "check": "issue-01: JPEG 1200x800 under 250KB",
+      "passed": true
+    },
+    {
+      "check": "issue-02: JPEG 1200x800 under 250KB",
+      "passed": true
+    },
+    {
+      "check": "issue-03: JPEG 1200x800 under 250KB",
+      "passed": true
+    },
+    {
+      "check": "philosophy: JPEG 1200x800 under 250KB",
+      "passed": true
+    },
+    {
+      "check": "case-01: JPEG 1200x800 under 250KB",
+      "passed": true
+    },
+    {
+      "check": "case-02: JPEG 1200x800 under 250KB",
+      "passed": true
+    },
+    {
+      "check": "case-03: JPEG 1200x800 under 250KB",
+      "passed": true
+    },
+    {
+      "check": "service-aistaff: JPEG 1200x800 under 250KB",
+      "passed": true
+    },
+    {
+      "check": "old case 1 retained",
+      "passed": true
+    },
+    {
+      "check": "old case 2 retained",
+      "passed": true
+    },
+    {
+      "check": "old case 3 retained",
+      "passed": true
+    }
+  ],
+  "colors": [
+    "#0F0F11",
+    "#327AFA",
+    "#616267",
+    "#9798A1",
+    "#EDF1F9",
+    "#FFFFFF"
+  ],
+  "radii": [
+    "12px",
+    "16px",
+    "24px",
+    "32px",
+    "9999px"
+  ],
+  "images": [
+    {
+      "file": "assets/issue-01.jpg",
+      "size": [
+        1200,
+        800
+      ],
+      "bytes": 110097,
+      "format": "JPEG"
+    },
+    {
+      "file": "assets/issue-02.jpg",
+      "size": [
+        1200,
+        800
+      ],
+      "bytes": 147901,
+      "format": "JPEG"
+    },
+    {
+      "file": "assets/issue-03.jpg",
+      "size": [
+        1200,
+        800
+      ],
+      "bytes": 128894,
+      "format": "JPEG"
+    },
+    {
+      "file": "assets/philosophy.jpg",
+      "size": [
+        1200,
+        800
+      ],
+      "bytes": 171604,
+      "format": "JPEG"
+    },
+    {
+      "file": "assets/case-01.jpg",
+      "size": [
+        1200,
+        800
+      ],
+      "bytes": 166604,
+      "format": "JPEG"
+    },
+    {
+      "file": "assets/case-02.jpg",
+      "size": [
+        1200,
+        800
+      ],
+      "bytes": 182574,
+      "format": "JPEG"
+    },
+    {
+      "file": "assets/case-03.jpg",
+      "size": [
+        1200,
+        800
+      ],
+      "bytes": 161064,
+      "format": "JPEG"
+    },
+    {
+      "file": "assets/service-aistaff.jpg",
+      "size": [
+        1200,
+        800
+      ],
+      "bytes": 131327,
+      "format": "JPEG"
+    }
+  ],
+  "reference_sha256": "26637db415b5c8f9f365701eb38460d36c6c43a54ff150e9f6faa3103c97dbfc"
+}
