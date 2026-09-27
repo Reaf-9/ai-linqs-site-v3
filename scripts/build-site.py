@@ -84,9 +84,9 @@ hero='<section id="hero" class="hero"><video class="hero-image" autoplay muted l
 philosophy_intro=['私たちがご提案するのは、業務の効率化だけではありません。','AIに任せられることはAIに任せ、人は、人にしかできない仕事に力を注ぐ。','働きがいが高まり、生産性が上がり、会社の成長につながっていく。','それが、AI Linqs の考える「人とAIのハイブリッド経営」です。']
 pillars=[('つながり','人の力を、|AIで引き出す。','AIは、人を減らすための道具じゃない。|一人ひとりが本来の仕事に集中できるように。|人と人の“つながり”を、取り戻すために。'),('伴走','ともに考え、|ともに動く。','外注先ではなく、伴走者として。|御社の現場に入り込み、課題を一緒に解く。|経営者の隣で、共に勝ちにいくパートナーへ。'),('未来','テクノロジーが、|地域の未来を変える。','人とAIのハイブリッド経営を、|日本の新しいスタンダードに。|その一歩を、淡路から、御社から。')]
 philosophy=section('philosophy',heading(lines('AIを入れて、|人はもっと、人らしく働く。'),eyebrow='私たちの想い')+'<div class="philosophy-intro"><div class="prose">'+''.join(p(x) for x in philosophy_intro)+'</div>'+photo('philosophy','明るい職場で笑顔で話す社員たちのイメージ')+'</div>'+grid([card(lines(t),lines(b),cls='pillar') for l,t,b in pillars],'pillars')+'<div class="actions">'+btn('会社概要を見る','about.html')+'</div>')
-issue_titles=['確認が、|社長に集まる','人を増やしても、|ラクにならない','紙・Excel・口頭が、|混在している']
-issue_bodies=['判断や承認が経営者に集中し、|売上が伸びるほど業務が詰まる。|気づけば現場が止まる原因が|自分になっている。','採用しても管理工数が減らず、|教育の費用ばかり増える。|人手は増えたのに|利益改善につながらない。','情報がバラバラで、|特定の人がいないと業務が止まる。|引き継ぎも属人化し、|ノウハウが残らない。']
-issues=section('issues',heading('こんなお悩み、<span class="phrase">ありませんか？</span>')+grid([card(lines(t),lines(b),photo(f'issue-0{i+1}')) for i,(t,b) in enumerate(zip(issue_titles,issue_bodies))],'issue-cards'),'surface-section')
+issue_titles=['確認が、社長に集まる','人を増やしても、ラクにならない','紙・Excel・口頭が、混在している']
+issue_bodies=['判断や承認が経営者に集中し、売上が伸びるほど業務が詰まる。気づけば現場が止まる原因が自分になっている。','採用しても管理工数が減らず、教育の費用ばかり増える。人手は増えたのに利益改善につながらない。','情報がバラバラで、特定の人がいないと業務が止まる。引き継ぎも属人化し、ノウハウが残らない。']
+issues=section('issues',heading('こんなお悩み、<span class="phrase">ありませんか？</span>')+grid([card(t,b,photo(f'issue-0{i+1}')) for i,(t,b) in enumerate(zip(issue_titles,issue_bodies))],'issue-cards'),'surface-section')
 timing_copy='人手不足が進むこれからの時代、AIは「人を減らす道具」ではなく、|「人の力を引き出す相棒」になります。早く始めた会社ほど、|現場に合った使い方が育ちます。まずは、できるところから。'
 timing=section('timing','<div class="timing-layout"><div class="timing-copy">'+heading('AIを入れるなら、<br>いまです。')+p(lines(timing_copy),'timing-body')+'<div class="actions">'+cta()+'</div></div><div class="timing-visual">'+photo('timing','机の前でひらめいた表情で顔を上げる経営者と、隣の社員')+'<span class="timing-mark" aria-hidden="true">！</span></div></div>')
 contract_steps=[
@@ -137,7 +137,7 @@ original_rows={row.one('dt').text():inner(row.one('dd')) for row in dl.children 
 for label,value in [('会社名',original_rows['運営会社']),('代表者',original_rows['代表者']),('所在地','〒651-0094 兵庫県神戸市中央区琴ノ緒町7-11-1'),('電話番号','準備中'),('事業内容',original_rows['事業内容'])]:
  rows.append('<tr><th scope="row">'+label+'</th><td>'+value+'</td></tr>')
 info.children=[c if c is not dl else '<!-- [要確認] 電話番号・設立年月・資本金などは確定後に追記 --><table class="company-table"><tbody>'+''.join(rows)+'</tbody></table>' for c in info.children]
-page('about.html','会社概要',text('company',cls='slide__lead'),about.html())
+page('about.html','会社概要',text('company',cls='slide__lead'),re.sub(r' ?<span class="todo">.*?</span>','',about.html()))
 
 # Service: original dialog contents become normal, accessible page sections.
 def detail(id):
