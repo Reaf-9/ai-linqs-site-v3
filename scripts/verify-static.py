@@ -28,7 +28,7 @@ for name,doc in docs.items():
  check(name+': shared CSS/JS',any(n.attrs.get('href')=='css/style.css' for n in doc.all('link')) and any(n.attrs.get('src')=='js/main.js' for n in doc.all('script')))
  check(name+': favicons',len([n for n in doc.all('link') if n.attrs.get('rel') in ['icon','apple-touch-icon']])==3)
  for n in doc.all():
-  for attr in ['href','src']:
+  for attr in ['href','src','poster']:
    if attr not in n.attrs:continue
    url=urlsplit(n.attrs[attr])
    if url.scheme or url.netloc:continue
@@ -64,6 +64,34 @@ for n in docs['index.html'].all(cls='pillar'):
  check('pillar: two heading / three body lines',len(n.one('h3').all('br'))==1 and len(n.one(cls='card-copy').all('br'))==2)
 check('removed top sections and copy',not any(term in docs['index.html'].text() for term in ['計算の例','AIがいる会社の、1日。','迷ったら、ここから','広げ方の順番','損']))
 check('hero: no chips',not docs['index.html'].all(cls='hero__chips'))
+# v3.2 requirements, checked against the supplied specification.
+home=docs['index.html'];about=docs['about.html'];spec=(ROOT/'SPEC-v3.2.md').read_text()
+video=home.one(id='hero').one('video')
+check('hero: video attributes',all(k in video.attrs for k in ['autoplay','muted','loop','playsinline']) and video.attrs.get('preload')=='metadata' and video.attrs.get('aria-hidden')=='true')
+check('hero: supplied media',video.attrs.get('poster')=='assets/hero-poster.jpg' and video.one('source').attrs.get('src')=='assets/hero.mp4')
+check('philosophy: growth flow and pillar labels removed',not home.all(cls='growth-flow') and not any(n.all(cls='eyebrow') for n in home.all(cls='pillar')))
+check('issues: removed explanatory copy','ひとつでも当てはまるなら、AIで変えられる余地があります。' not in home.one(id='issues').text())
+sections=[n.attrs.get('id') for n in home.one('main').all('section')]
+check('timing: immediately follows issues',sections[sections.index('issues')+1]=='timing')
+timing=home.one(id='timing')
+check('timing: explicit two heading lines',timing.one('h2').text()=='AIを入れるなら、いまです。' and len(timing.one('h2').all('br'))==1)
+expected=''.join(re.search(r'- 本文（3 行）：\n(.*?)\n- CTA',spec,re.S).group(1).splitlines()).replace('  ','')
+check('timing: verbatim body with three explicit lines',timing.one(cls='timing-body').text()==expected and len(timing.one(cls='timing-body').all('br'))==2)
+check('timing: separate HTML badge',timing.one(cls='timing-mark').text()=='！')
+check('timing: CTA',timing.one('a').text()=='LINEで無料相談' and 'data-line-cta' in timing.one('a').attrs)
+flow=home.one(cls='contract-flow')
+check('contract: heading and four rows',flow.one('h3').text()=='ご契約までの流れ' and len(flow.one('ol').all('li'))==4 and not home.one(id='reasons').all(cls='steps'))
+expected_steps=re.findall(r'  [1-4]\. \*\*(.*?)\*\* ─ (.*)',spec)
+for i,(node,(title,body)) in enumerate(zip(flow.all('li'),expected_steps),1):
+ check(f'contract {i}: verbatim title and body',node.one('h4').text()==title and node.one('p').text()==body)
+ check(f'contract {i}: image',node.one('img').attrs.get('src')==f'assets/step-0{i}.jpg')
+check('about: no small philosophy label',not about.one(cls='section-head').all(cls='eyebrow'))
+check('about: revised labels',[about.one(id=id).one(cls='slide__tag').text() for id in ['mission','vision','value']]==['Mission','Vision','大切にすること'])
+check('about: revised note',about.one(cls='section-head').one(cls='slide__note').text()=='Mission・Vision・大切にすること')
+rows=about.one(cls='company-table').all('tr')
+check('about: company row order',[n.one('th').text() for n in rows]==['会社名','代表者','所在地','電話番号','事業内容'])
+check('about: exact address and pending phone',rows[2].one('td').text()=='〒651-0094 兵庫県神戸市中央区琴ノ緒町7-11-1' and rows[3].one('td').text()=='準備中')
+check('about: confirmation immediately before table','<!-- [要確認] 電話番号・設立年月・資本金などは確定後に追記 --><table' in (ROOT/'about.html').read_text())
 css=(ROOT/'css/style.css').read_text()
 colors=sorted(set(re.findall(r'#[0-9a-fA-F]{6}\b',css)))
 radii=sorted(set(re.findall(r'border-radius:\s*([^;}]+)',css)))
@@ -71,7 +99,7 @@ check('CSS: only six approved colors',set(colors)=={'#FFFFFF','#EDF1F9','#327AFA
 check('CSS: only approved radii',set(radii)<={'4px','12px','16px','24px','32px','9999px'})
 check('CSS: no gradients/shadows/extra color functions',not re.search(r'(?:box-shadow|text-shadow|gradient\(|rgba?\(|hsla?\()',css))
 images=[]
-for name in ['issue-01','issue-02','issue-03','philosophy','case-01','case-02','case-03','service-aistaff']:
+for name in ['issue-01','issue-02','issue-03','philosophy','case-01','case-02','case-03','service-aistaff','timing','step-01','step-02','step-03','step-04']:
  p=ROOT/'assets'/f'{name}.jpg';im=Image.open(p)
  item={'file':str(p.relative_to(ROOT)),'size':list(im.size),'bytes':p.stat().st_size,'format':im.format};images.append(item)
  check(name+': JPEG 1200x800 under 250KB',im.format=='JPEG' and im.size==(1200,800) and p.stat().st_size<250000)

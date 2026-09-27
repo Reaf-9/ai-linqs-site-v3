@@ -55,6 +55,43 @@
   update();
 
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  const heroVideo = d.querySelector('video.hero-image');
+  const videoSource = heroVideo?.querySelector('source');
+  const videoUrl = videoSource?.getAttribute('src');
+  function syncHeroMotion() {
+    if (!heroVideo) return;
+    if (reducedMotion.matches) {
+      heroVideo.pause();
+      heroVideo.autoplay = false;
+      // Reset the media to its poster, even when the preference changes mid-playback.
+      videoSource.removeAttribute('src');
+      heroVideo.load();
+    } else {
+      videoSource.setAttribute('src', videoUrl);
+      heroVideo.autoplay = true;
+      heroVideo.load();
+      heroVideo.play().catch(() => {});
+    }
+  }
+  syncHeroMotion();
+  reducedMotion.addEventListener('change', syncHeroMotion);
+  const timingVisual = d.querySelector('.timing-visual');
+  if (timingVisual && 'IntersectionObserver' in window && !reducedMotion.matches) {
+    timingVisual.classList.add('is-pending');
+    const timingObserver = new IntersectionObserver(entries => {
+      if (entries.some(entry => entry.isIntersecting)) {
+        timingVisual.classList.remove('is-pending');
+        timingObserver.disconnect();
+      }
+    }, { threshold: 0.05 });
+    timingObserver.observe(d.getElementById('timing'));
+    reducedMotion.addEventListener('change', event => {
+      if (event.matches) {
+        timingObserver.disconnect();
+        timingVisual.classList.remove('is-pending');
+      }
+    });
+  }
   if ('IntersectionObserver' in window && !reducedMotion.matches) {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {

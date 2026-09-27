@@ -1,4 +1,4 @@
-"""Build static v3.1 pages from the immutable v3.0 reference; no dependencies."""
+"""Build static v3.2 pages from the immutable v3.0 reference; no dependencies."""
 from pathlib import Path
 from html.parser import HTMLParser
 from html import escape
@@ -79,17 +79,25 @@ def page(name,title,desc,body,home=False):
  out=re.sub(r'(?<![\w])((?:ご相談ください|お聞かせください|ご覧ください|していきます|つくります|なりました|しています|ありません|できます|大丈夫です|伴走します|ご提案します)。)(?![^<]*>)',r'<span class="phrase">\1</span>',out)
  (ROOT/name).write_text(out)
 
-# Top: full-bleed original visual, no overlaid chips.
-hero='<section id="hero" class="hero"><img class="hero-image" src="assets/key-visual.jpg" alt="" width="2048" height="679" fetchpriority="high"><div class="hero-inner"><div class="hero-copy">'+p('中小企業のための AI 導入パートナー — KOBE, JAPAN','eyebrow')+'<h1>'+lines('人とAIの|ハイブリッド経営を、|当たり前に。')+'</h1>'+p(text('hero',cls='slide__lead'),'lead')+cta()+'</div></div></section>'
+# Top: full-bleed video, with the existing poster and no overlaid chips.
+hero='<section id="hero" class="hero"><video class="hero-image" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg" aria-hidden="true"><source src="assets/hero.mp4" type="video/mp4"></video><div class="hero-inner"><div class="hero-copy">'+p('中小企業のための AI 導入パートナー — KOBE, JAPAN','eyebrow')+'<h1>'+lines('人とAIの|ハイブリッド経営を、|当たり前に。')+'</h1>'+p(text('hero',cls='slide__lead'),'lead')+cta()+'</div></div></section>'
 philosophy_intro=['私たちがご提案するのは、業務の効率化だけではありません。','AIに任せられることはAIに任せ、人は、人にしかできない仕事に力を注ぐ。','働きがいが高まり、生産性が上がり、会社の成長につながっていく。','それが、AI Linqs の考える「人とAIのハイブリッド経営」です。']
 pillars=[('つながり','人の力を、|AIで引き出す。','AIは、人を減らすための道具じゃない。|一人ひとりが本来の仕事に集中できるように。|人と人の“つながり”を、取り戻すために。'),('伴走','ともに考え、|ともに動く。','外注先ではなく、伴走者として。|御社の現場に入り込み、課題を一緒に解く。|経営者の隣で、共に勝ちにいくパートナーへ。'),('未来','テクノロジーが、|地域の未来を変える。','人とAIのハイブリッド経営を、|日本の新しいスタンダードに。|その一歩を、淡路から、御社から。')]
-philosophy=section('philosophy',heading(lines('AIを入れて、|人はもっと、人らしく働く。'),eyebrow='私たちの想い')+'<div class="philosophy-intro"><div class="prose">'+''.join(p(x) for x in philosophy_intro)+'</div>'+photo('philosophy','明るい職場で笑顔で話す社員たちのイメージ')+'</div><ol class="growth-flow">'+''.join('<li>'+lines(x)+'</li>' for x in ['人らしい|働き方','社員の|満足','生産性の|向上','会社の|成長'])+'</ol>'+grid([card(lines(t),lines(b),label=l,cls='pillar') for l,t,b in pillars],'pillars')+'<div class="actions">'+btn('会社概要を見る','about.html')+'</div>')
+philosophy=section('philosophy',heading(lines('AIを入れて、|人はもっと、人らしく働く。'),eyebrow='私たちの想い')+'<div class="philosophy-intro"><div class="prose">'+''.join(p(x) for x in philosophy_intro)+'</div>'+photo('philosophy','明るい職場で笑顔で話す社員たちのイメージ')+'</div>'+grid([card(lines(t),lines(b),cls='pillar') for l,t,b in pillars],'pillars')+'<div class="actions">'+btn('会社概要を見る','about.html')+'</div>')
 issue_titles=['確認が、|社長に集まる','人を増やしても、|ラクにならない','紙・Excel・口頭が、|混在している']
 issue_bodies=['判断や承認が経営者に集中し、|売上が伸びるほど業務が詰まる。|気づけば現場が止まる原因が|自分になっている。','採用しても管理工数が減らず、|教育の費用ばかり増える。|人手は増えたのに|利益改善につながらない。','情報がバラバラで、|特定の人がいないと業務が止まる。|引き継ぎも属人化し、|ノウハウが残らない。']
-issues=section('issues',heading('こんなお悩み、<span class="phrase">ありませんか？</span>','ひとつでも当てはまるなら、AIで変えられる余地があります。')+grid([card(lines(t),lines(b),photo(f'issue-0{i+1}')) for i,(t,b) in enumerate(zip(issue_titles,issue_bodies))],'issue-cards'),'surface-section')
+issues=section('issues',heading('こんなお悩み、<span class="phrase">ありませんか？</span>')+grid([card(lines(t),lines(b),photo(f'issue-0{i+1}')) for i,(t,b) in enumerate(zip(issue_titles,issue_bodies))],'issue-cards'),'surface-section')
+timing_copy='人手不足が進むこれからの時代、AIは「人を減らす道具」ではなく、|「人の力を引き出す相棒」になります。早く始めた会社ほど、|現場に合った使い方が育ちます。まずは、できるところから。'
+timing=section('timing','<div class="timing-layout"><div class="timing-copy">'+heading('AIを入れるなら、<br>いまです。')+p(lines(timing_copy),'timing-body')+'<div class="actions">'+cta()+'</div></div><div class="timing-visual">'+photo('timing','机の前でひらめいた表情で顔を上げる経営者と、隣の社員')+'<span class="timing-mark" aria-hidden="true">！</span></div></div>')
+contract_steps=[
+ ('お話を伺う','まずは現状とお悩みをお聞かせください。準備は要りません。「何から始めればいいか分からない」という段階で大丈夫です。業務の流れや困りごとを、経営者の言葉のままお話しいただきます。','応接スペースで経営者の話を聞く担当者'),
+ ('必要なことを整理','お聞きした内容をもとに、どの業務から手を付けると効果が大きいかを整理します。今のやり方を否定せず、現場の実情に合わせて、無理のない優先順位を一緒に決めていきます。','業務の流れを紙とホワイトボードで整理する社員たち'),
+ ('進め方とお見積もり','何を、どの順番で、どのくらいの期間で進めるのかを、工程表としてお見せします。あわせて、減らせる工数と費用を並べたお見積もりをお出しし、投資に見合うかをご判断いただきます。','机に広げた工程表と見積もりを説明する担当者'),
+ ('ご納得のうえご契約','内容と費用にご納得いただいてから、ご契約となります。無理な売り込みはいたしません。ご契約後は 2週間に1回お伺いし、定着するまで隣で伴走します。','笑顔で契約書類を交わす経営者と担当者')]
+contract_flow='<div class="contract-flow"><h3>ご契約までの流れ</h3><ol class="contract-steps">'+''.join('<li>'+photo(f'step-0{i+1}',alt)+'<span class="step-number" aria-hidden="true">'+str(i+1)+'</span><div class="contract-copy"><h4>'+title+'</h4>'+p(body)+'</div></li>' for i,(title,body,alt) in enumerate(contract_steps))+'</ol></div>'
 reason_titles=['進め方をお見せしてから、|ご契約。','アナログ体制の企業の|支援が得意。','定着まで、|隣で伴走。']
 reason_bodies=['AIの導入は「何をされるか分からない」のが|不安のもと。まずお話を伺い、|必要なことを整理し、進め方と|費用対効果のお見積もりをお出しします。|ご納得いただいてから、|ご契約です。','紙や口頭、Excel が中心でも大丈夫です。|「うちはまだ紙がメインで」という|会社こそ、伸びしろがあります。|今のやり方を否定せず、|現場に合わせて|設計します。','資料を渡して終わりにしません。|2週間に1回お伺いし、|いまの課題をお聞きして、|解決策を一緒に見つけます。|御社に合わせたオーダーメイドの仕組みを、|一緒につくります。']
-reasons=section('reasons',heading('“研修だけ・導入だけ”で、<br><span class="phrase">終わらせない。</span>',text('reasons',cls='slide__lead'),'選ばれる理由')+grid([card(lines(t),lines(b),label=f'0{i+1}') for i,(t,b) in enumerate(zip(reason_titles,reason_bodies))],'reason-cards')+'<div class="process-strip">'+steps(['お話を伺う','必要なことを整理','進め方とお見積もり','ご納得のうえご契約'])+'</div>')
+reasons=section('reasons',heading('“研修だけ・導入だけ”で、<br><span class="phrase">終わらせない。</span>',text('reasons',cls='slide__lead'),'選ばれる理由')+grid([card(lines(t),lines(b),label=f'0{i+1}') for i,(t,b) in enumerate(zip(reason_titles,reason_bodies))],'reason-cards')+contract_flow)
 svc_ids=['svc-training','svc-aistaff','svc-app']
 svc_bodies=['社内にAIを定着させる|3ヶ月の伴走研修。経営者の|言葉に合わせて進めます。','反復業務や確認・管理業務を|AIが担い、担当者依存と|管理負荷を解消。','現場固有のフローを、|そのまま使える仕組みに。|紙・Excel運用を置き換えます。']
 def services(detail=False):
@@ -108,7 +116,7 @@ for i in range(3):
  n=get(f'case-{i+1}')
  workcards.append(card(n.one('h3').text(),lines(case_summaries[i]),photo(f'case-0{i+1}'),['運送','自動車関連','オフィス'][i]))
 works_top=section('works',heading('導入事例')+grid(workcards,'case-cards')+p('※ 写真はイメージです。','note')+'<div class="actions">'+btn('導入事例を詳しく見る','works.html')+'</div>')
-page('index.html','中小企業のためのAI導入パートナー',text('hero',cls='slide__lead'),hero+philosophy+issues+reasons+services()+works_top+linepanel(),True)
+page('index.html','中小企業のためのAI導入パートナー',text('hero',cls='slide__lead'),hero+philosophy+issues+timing+reasons+services()+works_top+linepanel(),True)
 
 # About: original text, comments and all confirmation markers retained.
 about=get('company')
@@ -120,9 +128,15 @@ for i,id in enumerate(['mission','vision','value']):
  n=about.one(id=id);n.one('h3').children=[lines(about_headings[i])]
  if i<2:n.one(cls='slide__lead').children=[lines(about_bodies[i])]
 about.one(cls='grid3').attrs['class']='grid3 values'
+about.one(cls='section-head').remove(lambda n:'eyebrow' in n.attrs.get('class','').split() and n.text().strip()=='想い')
+about.one(cls='section-head').one(cls='slide__note').children=['Mission・Vision・大切にすること']
+for id,label in [('mission','Mission'),('vision','Vision'),('value','大切にすること')]:
+ about.one(id=id).one(cls='slide__tag').children=[label]
 info=about.one(id='company-info');dl=info.one('dl');rows=[]
-for row in [x for x in dl.children if isinstance(x,Node)]:rows.append('<tr><th scope="row">'+row.one('dt').text()+'</th><td>'+inner(row.one('dd'))+'</td></tr>')
-info.children=[c if c is not dl else '<table class="company-table"><tbody>'+''.join(rows)+'</tbody></table>' for c in info.children]
+original_rows={row.one('dt').text():inner(row.one('dd')) for row in dl.children if isinstance(row,Node)}
+for label,value in [('会社名',original_rows['運営会社']),('代表者',original_rows['代表者']),('所在地','〒651-0094 兵庫県神戸市中央区琴ノ緒町7-11-1'),('電話番号','準備中'),('事業内容',original_rows['事業内容'])]:
+ rows.append('<tr><th scope="row">'+label+'</th><td>'+value+'</td></tr>')
+info.children=[c if c is not dl else '<!-- [要確認] 電話番号・設立年月・資本金などは確定後に追記 --><table class="company-table"><tbody>'+''.join(rows)+'</tbody></table>' for c in info.children]
 page('about.html','会社概要',text('company',cls='slide__lead'),about.html())
 
 # Service: original dialog contents become normal, accessible page sections.

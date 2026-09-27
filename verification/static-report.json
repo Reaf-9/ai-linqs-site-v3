@@ -134,7 +134,11 @@
       "passed": true
     },
     {
-      "check": "index.html: local assets/key-visual.jpg",
+      "check": "index.html: local assets/hero-poster.jpg",
+      "passed": true
+    },
+    {
+      "check": "index.html: local assets/hero.mp4",
       "passed": true
     },
     {
@@ -163,6 +167,34 @@
     },
     {
       "check": "index.html: local assets/issue-03.jpg",
+      "passed": true
+    },
+    {
+      "check": "index.html: local contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "index.html: anchor contact.html#contact",
+      "passed": true
+    },
+    {
+      "check": "index.html: local assets/timing.jpg",
+      "passed": true
+    },
+    {
+      "check": "index.html: local assets/step-01.jpg",
+      "passed": true
+    },
+    {
+      "check": "index.html: local assets/step-02.jpg",
+      "passed": true
+    },
+    {
+      "check": "index.html: local assets/step-03.jpg",
+      "passed": true
+    },
+    {
+      "check": "index.html: local assets/step-04.jpg",
       "passed": true
     },
     {
@@ -1314,6 +1346,102 @@
       "passed": true
     },
     {
+      "check": "hero: video attributes",
+      "passed": true
+    },
+    {
+      "check": "hero: supplied media",
+      "passed": true
+    },
+    {
+      "check": "philosophy: growth flow and pillar labels removed",
+      "passed": true
+    },
+    {
+      "check": "issues: removed explanatory copy",
+      "passed": true
+    },
+    {
+      "check": "timing: immediately follows issues",
+      "passed": true
+    },
+    {
+      "check": "timing: explicit two heading lines",
+      "passed": true
+    },
+    {
+      "check": "timing: verbatim body with three explicit lines",
+      "passed": true
+    },
+    {
+      "check": "timing: separate HTML badge",
+      "passed": true
+    },
+    {
+      "check": "timing: CTA",
+      "passed": true
+    },
+    {
+      "check": "contract: heading and four rows",
+      "passed": true
+    },
+    {
+      "check": "contract 1: verbatim title and body",
+      "passed": true
+    },
+    {
+      "check": "contract 1: image",
+      "passed": true
+    },
+    {
+      "check": "contract 2: verbatim title and body",
+      "passed": true
+    },
+    {
+      "check": "contract 2: image",
+      "passed": true
+    },
+    {
+      "check": "contract 3: verbatim title and body",
+      "passed": true
+    },
+    {
+      "check": "contract 3: image",
+      "passed": true
+    },
+    {
+      "check": "contract 4: verbatim title and body",
+      "passed": true
+    },
+    {
+      "check": "contract 4: image",
+      "passed": true
+    },
+    {
+      "check": "about: no small philosophy label",
+      "passed": true
+    },
+    {
+      "check": "about: revised labels",
+      "passed": true
+    },
+    {
+      "check": "about: revised note",
+      "passed": true
+    },
+    {
+      "check": "about: company row order",
+      "passed": true
+    },
+    {
+      "check": "about: exact address and pending phone",
+      "passed": true
+    },
+    {
+      "check": "about: confirmation immediately before table",
+      "passed": true
+    },
+    {
       "check": "CSS: only six approved colors",
       "passed": true
     },
@@ -1355,6 +1483,26 @@
     },
     {
       "check": "service-aistaff: JPEG 1200x800 under 250KB",
+      "passed": true
+    },
+    {
+      "check": "timing: JPEG 1200x800 under 250KB",
+      "passed": true
+    },
+    {
+      "check": "step-01: JPEG 1200x800 under 250KB",
+      "passed": true
+    },
+    {
+      "check": "step-02: JPEG 1200x800 under 250KB",
+      "passed": true
+    },
+    {
+      "check": "step-03: JPEG 1200x800 under 250KB",
+      "passed": true
+    },
+    {
+      "check": "step-04: JPEG 1200x800 under 250KB",
       "passed": true
     },
     {
@@ -1456,6 +1604,51 @@
         800
       ],
       "bytes": 131327,
+      "format": "JPEG"
+    },
+    {
+      "file": "assets/timing.jpg",
+      "size": [
+        1200,
+        800
+      ],
+      "bytes": 135626,
+      "format": "JPEG"
+    },
+    {
+      "file": "assets/step-01.jpg",
+      "size": [
+        1200,
+        800
+      ],
+      "bytes": 172624,
+      "format": "JPEG"
+    },
+    {
+      "file": "assets/step-02.jpg",
+      "size": [
+        1200,
+        800
+      ],
+      "bytes": 172519,
+      "format": "JPEG"
+    },
+    {
+      "file": "assets/step-03.jpg",
+      "size": [
+        1200,
+        800
+      ],
+      "bytes": 152977,
+      "format": "JPEG"
+    },
+    {
+      "file": "assets/step-04.jpg",
+      "size": [
+        1200,
+        800
+      ],
+      "bytes": 162373,
       "format": "JPEG"
     }
   ],
